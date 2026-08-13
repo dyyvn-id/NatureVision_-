@@ -1,0 +1,1046 @@
+/* ==========================================
+   NATUREVISION V3
+   Premium Presentation
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow:hidden;
+
+    background:#edf5eb;
+
+    color:#214d3d;
+
+}
+
+/* =========================
+      SLIDE
+========================= */
+
+.slide{
+
+    width:100vw;
+
+    height:100vh;
+
+    display:none;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+    135deg,
+    #edf5eb,
+    #f7fbf5
+    );
+
+}
+
+.slide.active{
+
+    display:flex;
+
+}
+
+/* =========================
+      BACKGROUND
+========================= */
+
+.bg{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-2;
+
+    filter:brightness(.75);
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    90deg,
+    rgba(255,255,255,.93),
+    rgba(255,255,255,.55)
+    );
+
+    z-index:-1;
+
+}
+
+/* =========================
+      HERO
+========================= */
+
+.hero{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:80px;
+
+}
+
+.hero-text{
+
+    width:50%;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:#d6ead5;
+
+    color:#2f5d50;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.hero-text h1{
+
+    font-size:70px;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.hero-text p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#4b6557;
+
+    margin-bottom:30px;
+
+}
+
+.author{
+
+    margin-bottom:35px;
+
+}
+
+.author h3{
+
+    font-size:32px;
+
+    margin:8px 0;
+
+}
+
+.hero-image{
+
+    width:45%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.cover-img{
+
+    width:330px;
+
+    height:470px;
+
+    object-fit:cover;
+
+    border-radius:35px;
+
+    background:white;
+
+    padding:12px;
+
+    transform:rotate(-5deg);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.18);
+
+    transition:.4s;
+
+}
+
+.cover-img:hover{
+
+    transform:rotate(0deg) scale(1.05);
+
+}
+
+/* =========================
+      BUTTON
+========================= */
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+#startBtn{
+
+    background:#2F5D50;
+
+    color:white;
+
+    padding:18px 36px;
+
+    border-radius:40px;
+
+    font-size:19px;
+
+    transition:.3s;
+
+}
+
+#startBtn:hover{
+
+    background:#214d3d;
+
+    transform:translateY(-5px);
+
+}
+
+/* =========================
+      NAVIGATION
+========================= */
+
+.navigation{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(12px);
+
+    padding:14px 22px;
+
+    border-radius:50px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+}
+
+.navigation button{
+
+    background:#2F5D50;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+.navigation button:hover{
+
+    background:#214d3d;
+
+}
+
+#page{
+
+    min-width:70px;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   CONTAINER SLIDE
+========================================== */
+
+.container{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+    padding:70px;
+
+}
+
+.left{
+
+    width:42%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.left img{
+
+    width:100%;
+
+    max-width:480px;
+
+    border-radius:25px;
+
+    object-fit:cover;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+    transition:.4s;
+
+}
+
+.left img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.right{
+
+    width:58%;
+
+}
+
+.right h2{
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+    color:#214d3d;
+
+}
+
+.right h3{
+
+    margin-top:25px;
+
+    margin-bottom:15px;
+
+    color:#2F5D50;
+
+}
+
+.right p{
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    color:#4c5d52;
+
+    text-align:justify;
+
+}
+
+.right ul{
+
+    margin-top:15px;
+
+    padding-left:25px;
+
+}
+
+.right li{
+
+    margin:12px 0;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.content{
+
+    width:92%;
+
+    margin:auto;
+
+    padding-top:40px;
+
+}
+
+.title{
+
+    text-align:center;
+
+    font-size:48px;
+
+    color:#214d3d;
+
+    margin-bottom:15px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    font-size:19px;
+
+    color:#666;
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================================
+   CARD TANAMAN
+========================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card h3{
+
+    text-align:center;
+
+    margin:18px 0;
+
+    color:#214d3d;
+
+}
+
+.card p{
+
+    padding:0 18px 25px;
+
+    line-height:1.7;
+
+    text-align:center;
+
+    color:#555;
+
+}
+
+/* ==========================================
+   LIST
+========================================== */
+
+ol{
+
+    padding-left:28px;
+
+    margin-top:20px;
+
+}
+
+ol li{
+
+    margin:12px 0;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   COMPARE
+========================================== */
+
+.compare{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+.plus,
+.minus{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.plus h3{
+
+    color:#2f8f52;
+
+}
+
+.minus h3{
+
+    color:#d74242;
+
+}
+
+.plus ul,
+.minus ul{
+
+    margin-top:15px;
+
+}
+
+/* ==========================================
+   THANK YOU
+========================================== */
+
+.end{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.thanks{
+
+    width:700px;
+
+    background:white;
+
+    padding:60px;
+
+    border-radius:35px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+.thanks h1{
+
+    font-size:70px;
+
+}
+
+.thanks h2{
+
+    font-size:48px;
+
+    margin:15px 0;
+
+    color:#214d3d;
+
+}
+
+.thanks p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin-bottom:35px;
+
+}
+
+.thanks button{
+
+    background:#2F5D50;
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:35px;
+
+    font-size:18px;
+
+}
+
+.thanks button:hover{
+
+    background:#214d3d;
+
+}
+
+/* ==========================================
+   PREMIUM ANIMATION
+========================================== */
+
+.slide{
+
+    opacity:0;
+
+    transform:scale(.97);
+
+    transition:opacity .6s ease, transform .6s ease;
+
+}
+
+.slide.active{
+
+    display:flex;
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/* ==========================================
+   FADE UP
+========================================== */
+
+.hero-text,
+.hero-image,
+.left,
+.right,
+.card,
+.plus,
+.minus,
+.thanks{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   FLOAT COVER
+========================================== */
+
+.cover-img{
+
+    animation:floatImage 4s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0) rotate(-5deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px) rotate(-3deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0) rotate(-5deg);
+
+    }
+
+}
+
+/* ==========================================
+   GLASS EFFECT
+========================================== */
+
+.navigation,
+.card,
+.plus,
+.minus,
+.thanks{
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.4);
+
+}
+
+/* ==========================================
+   HOVER EFFECT
+========================================== */
+
+.card img{
+
+    transition:.4s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+button{
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2F5D50;
+
+    border-radius:20px;
+
+}
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media(max-width:1000px){
+
+.hero{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.hero-text{
+
+    width:100%;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    margin-top:30px;
+
+}
+
+.cover-img{
+
+    width:260px;
+
+    height:360px;
+
+}
+
+.container{
+
+    flex-direction:column;
+
+    padding:40px;
+
+}
+
+.left,
+.right{
+
+    width:100%;
+
+}
+
+.right h2{
+
+    font-size:38px;
+
+    text-align:center;
+
+}
+
+.compare{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media(max-width:700px){
+
+.hero{
+
+    padding:25px;
+
+}
+
+.hero-text h1{
+
+    font-size:44px;
+
+}
+
+.hero-text p{
+
+    font-size:17px;
+
+}
+
+.badge{
+
+    font-size:14px;
+
+}
+
+.author h3{
+
+    font-size:24px;
+
+}
+
+.cover-img{
+
+    width:200px;
+
+    height:280px;
+
+}
+
+.navigation{
+
+    width:95%;
+
+    bottom:15px;
+
+    padding:10px 15px;
+
+    gap:10px;
+
+}
+
+.navigation button{
+
+    padding:10px 15px;
+
+    font-size:14px;
+
+}
+
+#page{
+
+    font-size:14px;
+
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.title{
+
+    font-size:34px;
+
+}
+
+.subtitle{
+
+    font-size:16px;
+
+}
+
+.right h2{
+
+    font-size:30px;
+
+}
+
+.right p,
+
+.right li,
+
+.card p{
+
+    font-size:16px;
+
+}
+
+.thanks{
+
+    width:90%;
+
+    padding:35px;
+
+}
+
+.thanks h2{
+
+    font-size:34px;
+
+}
+
+.thanks p{
+
+    font-size:18px;
+
+}
+
+}
+
+/* ==========================================
+   SHADOW
+========================================== */
+
+.card,
+.plus,
+.minus,
+.thanks{
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.cover-img{
+
+    box-shadow:0 25px 55px rgba(0,0,0,.18);
+
+}
